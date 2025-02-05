@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	updateButtonStates();
 	if (localStorage.getItem('smallIcons') === 'false') {
 		switch (localStorage.getItem('dropdown-selected-text-searchEngine')) {
-			case 'Duck Duck Go':
+			case 'Duck Duck Go (default)':
 				document.querySelector('.searchEngineIcon').src =
 					'/assets/imgs/b/ddg.webp';
 				document.querySelector('.searchEngineIcon').style.transform =
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				document.querySelector('.searchEngineIcon').style.transform =
 					'scale(1.65)';
 				break;
-			case 'Google (default)':
+			case 'Google':
 				document.querySelector('.searchEngineIcon').src =
 					'/assets/imgs/b/google.webp';
 				document.querySelector('.searchEngineIcon').style.transform =
@@ -378,9 +378,9 @@ document.addEventListener('DOMContentLoaded', function () {
 				break;
 			default:
 				document.querySelector('.searchEngineIcon').src =
-					'/assets/imgs/b/google.webp';
+					'/assets/imgs/b/ddg.webp';
 				document.querySelector('.searchEngineIcon').style.transform =
-					'scale(1.2)';
+					'scale(1.35)';
 		}
 	}
 });
