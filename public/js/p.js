@@ -53,20 +53,20 @@ function search(input) {
 	let searchTemplate;
 
 	switch (localStorage.getItem('dropdown-selected-text-searchEngine')) {
-		case 'Duck Duck Go':
+		case 'Duck Duck Go (default)':
 			searchTemplate = 'https://duckduckgo.com/?q=%s';
 			break;
 		case 'Bing':
 			searchTemplate = 'https://bing.com/search?q=%s';
 			break;
-		case 'Google (default)':
+		case 'Google':
 			searchTemplate = 'https://google.com/search?q=%s';
 			break;
 		case 'Yahoo!':
 			searchTemplate = 'https://search.yahoo.com/search?p=%s';
 			break;
 		default:
-			searchTemplate = 'https://google.com/search?q=%s';
+			searchTemplate = 'https://duckduckgo.com/?q=%s;
 	}
 
 	if (urlPattern.test(input)) {
